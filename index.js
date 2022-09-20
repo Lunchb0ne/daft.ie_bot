@@ -142,7 +142,7 @@ async function main(linkrun, target) {
 
     // main timer - edit this timer as to often do you want the bot to run
     // in order to not get banned from IP adress running this bot every 3 mins might be safe enough //
-    await timer(18000);
+    await timer(180000);
   }
 }
 
