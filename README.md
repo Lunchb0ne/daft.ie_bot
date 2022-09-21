@@ -27,7 +27,7 @@ All the best for your house hunting!
 
 - Whenever the bot applies to a new listing it prints the confirmation message in the terminal
 - You can change the frequency of often should the bot run in index.js ```line 52```
-- If you are worried about getting your IP banned from setting too amny requests to api endpoint, you can try using this - https://www.youtube.com/watch?v=2_r2DxGR7I8
+- If you are worried about getting your IP banned from setting too many requests to api endpoint, you can try using this - https://www.youtube.com/watch?v=2_r2DxGR7I8
 
 
 If you feel you can this bot more robust or add any new features please feel free to raise PR. Good luck!
