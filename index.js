@@ -27,14 +27,11 @@ async function getLinks(url) {
 }
 
 async function main(linkrun, target) {
-  let firstRun = true;
   let baseLink = await getLinks(linkrun);
   console.log(baseLink);
   for (;;) {
     const reloadedLink = await getLinks(linkrun);
-    const difference = firstRun
-      ? reloadedLink
-      : reloadedLink.filter((x) => !baseLink.includes(x));
+    const difference = reloadedLink.filter((x) => !baseLink.includes(x));
 
     if (difference.length > 0) {
       console.log("difference found: ", difference);
@@ -51,10 +48,8 @@ async function main(linkrun, target) {
     }
     console.log("running: ", reloadedLink[0], target);
 
-    // main timer - edit this timer as to often do you want the bot to run
-    // in order to not get banned from IP adress running this bot every 3 mins might be safe enough //
-    await timer(1800);
-    if (firstRun) firstRun = false;
+    // main timer (milliseconds) - edit this timer as to often do you want the bot to run//
+    await timer(60000);
   }
 }
 
